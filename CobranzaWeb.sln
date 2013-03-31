@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CobranzaWeb", "CobranzaWeb\CobranzaWeb.csproj", "{28EA80DD-AFBC-4CE8-9616-8E0D30919314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CobranzaWeb.Tests", "CobranzaWeb.Tests\CobranzaWeb.Tests.csproj", "{538F7251-8D1C-4A93-9613-4C7DD5B53BB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28EA80DD-AFBC-4CE8-9616-8E0D30919314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28EA80DD-AFBC-4CE8-9616-8E0D30919314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28EA80DD-AFBC-4CE8-9616-8E0D30919314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28EA80DD-AFBC-4CE8-9616-8E0D30919314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{538F7251-8D1C-4A93-9613-4C7DD5B53BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{538F7251-8D1C-4A93-9613-4C7DD5B53BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{538F7251-8D1C-4A93-9613-4C7DD5B53BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{538F7251-8D1C-4A93-9613-4C7DD5B53BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

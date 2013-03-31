@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="516f84f0-7def-4102-83fb-bbe984b1818f" name="Cesar@CESAR-HP 2013-03-30 20:19:29" runUser="Cesar-HP\Cesar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Configuración de pruebas predeterminada" id="26da70e5-c1b0-4a8c-b256-264d232a3f9e">
+    <Deployment runDeploymentRoot="Cesar_CESAR-HP 2013-03-30 20_19_29">
+      <DeploymentItem filename="c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\bin\CobranzaWeb.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-03-30T20:19:29.9774528-05:00" queuing="2013-03-30T20:19:42.4551665-05:00" start="2013-03-30T20:19:43.0822024-05:00" finish="2013-03-30T20:19:48.6805226-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="c:\users\cesar\documents\visual studio 2010\projects\cobranzaweb\cobranzaweb.tests\bin\debug\cobranzaweb.tests.dll" id="b4ddeb6d-bfc2-ee77-c4a1-fac51728f683">
+      <Execution id="a3a4b322-74c7-42b2-b4ff-e7b60979c6d4" />
+      <TestMethod codeBase="c:/users/cesar/documents/visual studio 2010/Projects/CobranzaWeb/CobranzaWeb.Tests/bin/Debug/CobranzaWeb.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CobranzaWeb.Tests.Controllers.HomeControllerTest, CobranzaWeb.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\cesar\documents\visual studio 2010\projects\cobranzaweb\cobranzaweb.tests\bin\debug\cobranzaweb.tests.dll" id="c05dd54a-a7f2-5c35-13c0-bfd8d4df0b4f">
+      <Execution id="f18c46b8-329d-4217-9126-7077060f1ff6" />
+      <TestMethod codeBase="c:/users/cesar/documents/visual studio 2010/Projects/CobranzaWeb/CobranzaWeb.Tests/bin/Debug/CobranzaWeb.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CobranzaWeb.Tests.Controllers.HomeControllerTest, CobranzaWeb.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="c05dd54a-a7f2-5c35-13c0-bfd8d4df0b4f" executionId="f18c46b8-329d-4217-9126-7077060f1ff6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4ddeb6d-bfc2-ee77-c4a1-fac51728f683" executionId="a3a4b322-74c7-42b2-b4ff-e7b60979c6d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f18c46b8-329d-4217-9126-7077060f1ff6" testId="c05dd54a-a7f2-5c35-13c0-bfd8d4df0b4f" testName="Index" computerName="CESAR-HP" duration="00:00:01.0760018" startTime="2013-03-30T20:19:43.3062152-05:00" endTime="2013-03-30T20:19:48.2604985-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f18c46b8-329d-4217-9126-7077060f1ff6">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3a4b322-74c7-42b2-b4ff-e7b60979c6d4" testId="b4ddeb6d-bfc2-ee77-c4a1-fac51728f683" testName="About" computerName="CESAR-HP" duration="00:00:00.0012345" startTime="2013-03-30T20:19:48.3015009-05:00" endTime="2013-03-30T20:19:48.3185019-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3a4b322-74c7-42b2-b4ff-e7b60979c6d4">
+    </UnitTestResult>
+  </Results>
+</TestRun>

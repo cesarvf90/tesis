@@ -1,0 +1,8 @@
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\CobranzaWeb.Tests.dll.config
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\CobranzaWeb.Tests.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\CobranzaWeb.Tests.pdb
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\CobranzaWeb.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\CobranzaWeb.pdb
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\CobranzaWeb.Tests.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\CobranzaWeb.Tests.pdb

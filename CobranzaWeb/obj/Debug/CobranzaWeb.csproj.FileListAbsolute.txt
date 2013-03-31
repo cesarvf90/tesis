@@ -1,0 +1,7 @@
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\bin\CobranzaWeb.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\bin\CobranzaWeb.pdb
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\bin\EntityFramework.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\bin\EntityFramework.xml
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\obj\Debug\ResolveAssemblyReference.cache
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\obj\Debug\CobranzaWeb.dll
+c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb\obj\Debug\CobranzaWeb.pdb
