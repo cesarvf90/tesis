@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cobranzasModelStoreContainer" CdmEntityContainer="cobranzasEntities2">
+    <EntitySetMapping Name="Actividads">
+      <EntityTypeMapping TypeName="cobranzasModel.Actividad">
+        <MappingFragment StoreEntitySet="Actividad">
+          <ScalarProperty Name="idActividad" ColumnName="idActividad" />
+          <ScalarProperty Name="idTipoActividad" ColumnName="idTipoActividad" />
+          <ScalarProperty Name="idDeuda" ColumnName="idDeuda" />
+          <ScalarProperty Name="idGestor" ColumnName="idGestor" />
+          <ScalarProperty Name="idResultado" ColumnName="idResultado" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="detalles" ColumnName="detalles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carteras">
+      <EntityTypeMapping TypeName="cobranzasModel.Cartera">
+        <MappingFragment StoreEntitySet="Cartera">
+          <ScalarProperty Name="idCartera" ColumnName="idCartera" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="esVencida" ColumnName="esVencida" />
+          <ScalarProperty Name="porcentajeGanancia" ColumnName="porcentajeGanancia" />
+          <ScalarProperty Name="detalles" ColumnName="detalles" />
+          <ScalarProperty Name="cantidadDeudas" ColumnName="cantidadDeudas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="cobranzasModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="ruc" ColumnName="ruc" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="rubro" ColumnName="rubro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuotas">
+      <EntityTypeMapping TypeName="cobranzasModel.Cuota">
+        <MappingFragment StoreEntitySet="Cuota">
+          <ScalarProperty Name="idCuota" ColumnName="idCuota" />
+          <ScalarProperty Name="idRefinanciacion" ColumnName="idRefinanciacion" />
+          <ScalarProperty Name="fechaPactada" ColumnName="fechaPactada" />
+          <ScalarProperty Name="fechaPago" ColumnName="fechaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deudas">
+      <EntityTypeMapping TypeName="cobranzasModel.Deuda">
+        <MappingFragment StoreEntitySet="Deuda">
+          <ScalarProperty Name="idDeuda" ColumnName="idDeuda" />
+          <ScalarProperty Name="idDeudor" ColumnName="idDeudor" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idCartera" ColumnName="idCartera" />
+          <ScalarProperty Name="idTipoDeuda" ColumnName="idTipoDeuda" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="antiguedadDias" ColumnName="antiguedadDias" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="esCuota" ColumnName="esCuota" />
+          <ScalarProperty Name="dificultad" ColumnName="dificultad" />
+          <ScalarProperty Name="pagada" ColumnName="pagada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deudors">
+      <EntityTypeMapping TypeName="cobranzasModel.Deudor">
+        <MappingFragment StoreEntitySet="Deudor">
+          <ScalarProperty Name="idDeudor" ColumnName="idDeudor" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
+          <ScalarProperty Name="numeroDocumneto" ColumnName="numeroDocumneto" />
+          <ScalarProperty Name="telefonoPersonal" ColumnName="telefonoPersonal" />
+          <ScalarProperty Name="telefonoDomicilio" ColumnName="telefonoDomicilio" />
+          <ScalarProperty Name="telefonoTrabajo" ColumnName="telefonoTrabajo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="poseeTrabajo" ColumnName="poseeTrabajo" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="numeroTotalDeudas" ColumnName="numeroTotalDeudas" />
+          <ScalarProperty Name="totalAdeudado" ColumnName="totalAdeudado" />
+          <ScalarProperty Name="estadoCivil" ColumnName="estadoCivil" />
+          <ScalarProperty Name="numeroHijos" ColumnName="numeroHijos" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gestors">
+      <EntityTypeMapping TypeName="cobranzasModel.Gestor">
+        <MappingFragment StoreEntitySet="Gestor">
+          <ScalarProperty Name="idGestor" ColumnName="idGestor" />
+          <ScalarProperty Name="idNivelGestor" ColumnName="idNivelGestor" />
+          <ScalarProperty Name="idTipoGestor" ColumnName="idTipoGestor" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+          <ScalarProperty Name="deudasRecuperadas" ColumnName="deudasRecuperadas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GestorXDeudas">
+      <EntityTypeMapping TypeName="cobranzasModel.GestorXDeuda">
+        <MappingFragment StoreEntitySet="GestorXDeuda">
+          <ScalarProperty Name="idGestor" ColumnName="idGestor" />
+          <ScalarProperty Name="idDeuda" ColumnName="idDeuda" />
+          <ScalarProperty Name="fechaAsignacion" ColumnName="fechaAsignacion" />
+          <ScalarProperty Name="exito" ColumnName="exito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametroes">
+      <EntityTypeMapping TypeName="cobranzasModel.Parametro">
+        <MappingFragment StoreEntitySet="Parametro">
+          <ScalarProperty Name="idParametro" ColumnName="idParametro" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="valorNum" ColumnName="valorNum" />
+          <ScalarProperty Name="idPadre" ColumnName="idPadre" />
+          <ScalarProperty Name="codUnico" ColumnName="codUnico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisoes">
+      <EntityTypeMapping TypeName="cobranzasModel.Permiso">
+        <MappingFragment StoreEntitySet="Permiso">
+          <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="funcionalidad" ColumnName="funcionalidad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoliticaCobranzas">
+      <EntityTypeMapping TypeName="cobranzasModel.PoliticaCobranza">
+        <MappingFragment StoreEntitySet="PoliticaCobranza">
+          <ScalarProperty Name="idPoliticaCobranza" ColumnName="idPoliticaCobranza" />
+          <ScalarProperty Name="idCartera" ColumnName="idCartera" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="obligatoria" ColumnName="obligatoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoliticaCobranzaXTipoActividads">
+      <EntityTypeMapping TypeName="cobranzasModel.PoliticaCobranzaXTipoActividad">
+        <MappingFragment StoreEntitySet="PoliticaCobranzaXTipoActividad">
+          <ScalarProperty Name="idPoliticaCobranza" ColumnName="idPoliticaCobranza" />
+          <ScalarProperty Name="idTipoActividad" ColumnName="idTipoActividad" />
+          <ScalarProperty Name="numeroPaso" ColumnName="numeroPaso" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Refinanciacions">
+      <EntityTypeMapping TypeName="cobranzasModel.Refinanciacion">
+        <MappingFragment StoreEntitySet="Refinanciacion">
+          <ScalarProperty Name="idRefinanciacion" ColumnName="idRefinanciacion" />
+          <ScalarProperty Name="idActividad" ColumnName="idActividad" />
+          <ScalarProperty Name="idDeuda" ColumnName="idDeuda" />
+          <ScalarProperty Name="numeroCuotas" ColumnName="numeroCuotas" />
+          <ScalarProperty Name="montoCuota" ColumnName="montoCuota" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="fechaRefinanciacion" ColumnName="fechaRefinanciacion" />
+          <ScalarProperty Name="periodicidadMeses" ColumnName="periodicidadMeses" />
+          <ScalarProperty Name="interes" ColumnName="interes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rols">
+      <EntityTypeMapping TypeName="cobranzasModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="cobranzasModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoActividads">
+      <EntityTypeMapping TypeName="cobranzasModel.TipoActividad">
+        <MappingFragment StoreEntitySet="TipoActividad">
+          <ScalarProperty Name="idTipoActividad" ColumnName="idTipoActividad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="cobranzasModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idGestor" ColumnName="idGestor" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="nombreUsuario" ColumnName="nombreUsuario" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="tipoUsuario" ColumnName="tipoUsuario" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RolXPermiso" TypeName="cobranzasModel.RolXPermiso" StoreEntitySet="RolXPermiso">
+      <EndProperty Name="Permiso">
+        <ScalarProperty Name="idPermiso" ColumnName="idPermiso" />
+      </EndProperty>
+      <EndProperty Name="Rol">
+        <ScalarProperty Name="idRol" ColumnName="idRol" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

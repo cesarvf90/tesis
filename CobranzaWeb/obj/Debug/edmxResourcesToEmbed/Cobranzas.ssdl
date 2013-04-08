@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cobranzasModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="cobranzasModel1StoreContainer">
+    <EntitySet Name="Cartera" EntityType="cobranzasModel1.Store.Cartera" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cliente" EntityType="cobranzasModel1.Store.Cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Deuda" EntityType="cobranzasModel1.Store.Deuda" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gestor" EntityType="cobranzasModel1.Store.Gestor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="cobranzasModel1.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Cartera_Cliente" Association="cobranzasModel1.Store.FK_Cartera_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Cartera" EntitySet="Cartera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Deuda_Cartera1" Association="cobranzasModel1.Store.FK_Deuda_Cartera1">
+      <End Role="Cartera" EntitySet="Cartera" />
+      <End Role="Deuda" EntitySet="Deuda" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cartera">
+    <Key>
+      <PropertyRef Name="idCartera" />
+    </Key>
+    <Property Name="idCartera" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="esVencida" Type="int" Nullable="false" />
+    <Property Name="porcentajeGanancia" Type="int" Nullable="false" />
+    <Property Name="detalles" Type="nvarchar" MaxLength="250" />
+    <Property Name="cantidadDeudas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="razonSocial" Type="nvarchar" MaxLength="50" />
+    <Property Name="ruc" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="100" />
+    <Property Name="rubro" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deuda">
+    <Key>
+      <PropertyRef Name="idDeuda" />
+    </Key>
+    <Property Name="idDeuda" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCartera" Type="int" Nullable="false" />
+    <Property Name="idTipoDeuda" Type="int" Nullable="false" />
+    <Property Name="monto" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="antiguedadDias" Type="int" />
+    <Property Name="moneda" Type="int" Nullable="false" />
+    <Property Name="esCuota" Type="int" Nullable="false" />
+    <Property Name="dificultad" Type="int" />
+    <Property Name="pagada" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gestor">
+    <Key>
+      <PropertyRef Name="idGestor" />
+    </Key>
+    <Property Name="idGestor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idNivelGestor" Type="int" Nullable="false" />
+    <Property Name="idTipoGestor" Type="int" Nullable="false" />
+    <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="apellidoPaterno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="apellidoMaterno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="fechaIngreso" Type="datetime" Nullable="false" />
+    <Property Name="deudasRecuperadas" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Cartera_Cliente">
+    <End Role="Cliente" Type="cobranzasModel1.Store.Cliente" Multiplicity="1" />
+    <End Role="Cartera" Type="cobranzasModel1.Store.Cartera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="idCliente" />
+      </Principal>
+      <Dependent Role="Cartera">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Deuda_Cartera1">
+    <End Role="Cartera" Type="cobranzasModel1.Store.Cartera" Multiplicity="1" />
+    <End Role="Deuda" Type="cobranzasModel1.Store.Deuda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cartera">
+        <PropertyRef Name="idCartera" />
+      </Principal>
+      <Dependent Role="Deuda">
+        <PropertyRef Name="idCartera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

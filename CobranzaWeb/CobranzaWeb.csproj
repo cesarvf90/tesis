@@ -34,11 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -63,14 +66,85 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GestoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Actividad.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cartera.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CobranzaModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CobranzaModelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cuota.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Deuda.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Deudor.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gestor.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GestorXDeuda.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloCobranzas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCobranzas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloCobranzas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parametro.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permiso.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoliticaCobranza.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoliticaCobranzaXTipoActividad.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Refinanciacion.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rol.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoActividad.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>ModeloCobranzas.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cobranzas.mdf" />
+    <Content Include="cobranzas_log.ldf">
+      <DependentUpon>cobranzas.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -109,7 +183,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -144,6 +220,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="Models\CobranzaModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CobranzaModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ModeloCobranzas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloCobranzas.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\ModeloCobranzas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloCobranzas.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Gestores\Index.cshtml" />
+    <Content Include="Views\Gestores\Create.cshtml" />
+    <Content Include="Views\Gestores\Edit.cshtml" />
+    <Content Include="Views\Gestores\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CobranzaWeb.Models;
 
 namespace CobranzaWeb.Controllers
 {
@@ -11,7 +12,6 @@ namespace CobranzaWeb.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Welcome to ASP.NET MVC!";
-
             return View();
         }
 

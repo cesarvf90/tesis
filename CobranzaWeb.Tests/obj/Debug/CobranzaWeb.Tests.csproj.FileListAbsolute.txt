@@ -6,3 +6,5 @@ c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tes
 c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\ResolveAssemblyReference.cache
 c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\CobranzaWeb.Tests.dll
 c:\users\cesar\documents\visual studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\obj\Debug\CobranzaWeb.Tests.pdb
+C:\Users\Cesar\Documents\Visual Studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Cesar\Documents\Visual Studio 2010\Projects\CobranzaWeb\CobranzaWeb.Tests\bin\Debug\EntityFramework.xml
